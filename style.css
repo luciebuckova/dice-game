@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   margin: 0;
   background-image: url('./images/hallo-bg.jpg');
@@ -17,45 +17,41 @@ body {
   background-size: cover;
 }
 
-h1 {
-  font-size: 5rem;
-  font-style: normal;
+.main-heading {
+  font-size: 3rem;
   font-weight: 400;
-  line-height: normal;
-  margin-top: 0;
-  margin-bottom: 1.88rem;
+  margin: 1.88rem 0;
+  text-align: center;
 }
 
-h2 {
+.subheading {
   color: #70d887;
-  font-size: 2.5rem;
-  font-style: normal;
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: normal;
   margin-top: 0;
-  margin-bottom: 3.63rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-div > h3 {
-  font-size: 2rem;
-  font-style: normal;
+.dice-heading {
+  font-size: 1rem;
   font-weight: 400;
-  line-height: normal;
+  text-align: center;
 }
 
-h3 span {
-  color: #c586d9;
+.dice-heading span {
+  color: #e3e3e3;
   text-transform: uppercase;
   margin-bottom: 1.87rem;
 }
 
 .container {
   display: flex;
-  gap: 6.25rem;
-  margin-bottom: 4.88rem;
+  gap: 3.25rem;
+  margin-bottom: 3rem;
 }
 
-.container > div {
+.dice-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,12 +59,12 @@ h3 span {
 }
 
 .dice {
-  padding: 0.75rem;
-  width: 9.375rem;
-  height: 9.375rem;
+  padding: 0.5rem;
+  width: 7rem;
+  height: 7rem;
   flex-shrink: 0;
-  border-radius: 0.875rem;
-  background: #c586d9;
+  border-radius: 0.5rem;
+  background: #e3e3e3;
   box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.1), -1px -1px 10px 0px #fff;
   display: grid;
   grid-template-areas:
@@ -107,17 +103,12 @@ h3 span {
 }
 
 .btn {
-  display: inline-flex;
-  padding: 0.9375rem 1.875rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   background: #fe7702;
   box-shadow: -1px -1px 10px 0px #fff, 7px 7px 10px 0px rgba(0, 0, 0, 0.1);
-  font-size: 2rem;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: normal;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -129,4 +120,37 @@ h3 span {
 
 .btn--hidden {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    justify-content: center;
+  }
+  .main-heading {
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 1.88rem;
+  }
+  .subheading {
+    font-size: 2.5rem;
+    margin-bottom: 3.63rem;
+  }
+  .dice-heading {
+    font-size: 2rem;
+  }
+  .container {
+    gap: 6.25rem;
+    margin-bottom: 4.88rem;
+  }
+  .dice {
+    padding: 0.75rem;
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 0.875rem;
+  }
+  .btn {
+    padding: 0.9375rem 1.875rem;
+    border-radius: 0.875rem;
+    font-size: 2rem;
+  }
 }

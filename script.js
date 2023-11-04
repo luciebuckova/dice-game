@@ -2,21 +2,21 @@ const btn = document.querySelector('.btn');
 const btn2 = document.querySelector('.btn--hidden');
 const myDice = document.querySelector('.dice1');
 const yourDice = document.querySelector('.dice2');
-const h1 = document.querySelector('h1');
-const h2 = document.querySelector('h2');
+const mainHeading = document.querySelector('.main-heading');
+const subheading = document.querySelector('.subheading');
 const container = document.querySelector('.container');
 
 let originalContent = {
-  h1: h1.innerHTML,
-  h2: h2.innerHTML,
+  h1: mainHeading.innerHTML,
+  h2: subheading.innerHTML,
 };
 
 btn.addEventListener('click', generatePips);
 btn2.addEventListener('click', () => {
   document.body.style.backgroundImage = "url('./images/hallo-bg.jpg')";
-  h1.innerHTML = originalContent.h1;
-  h1.style.color = '#000';
-  h2.innerHTML = originalContent.h2;
+  mainHeading.innerHTML = originalContent.h1;
+  mainHeading.style.color = '#000';
+  subheading.innerHTML = originalContent.h2;
   btn.style.display = 'block';
   btn2.style.display = 'none';
 });
@@ -40,18 +40,18 @@ function generatePips() {
   yourDice.innerHTML = yourPips;
 
   if (randomNumber1 === randomNumber2) {
-    h1.innerHTML = 'Plichta!';
-    h1.style.color = '#000';
-    h2.innerHTML = '';
+    mainHeading.innerHTML = 'Plichta!';
+    mainHeading.style.color = '#000';
+    subheading.innerHTML = '';
   } else if (randomNumber1 > randomNumber2) {
-    h1.innerHTML = 'Tentokrát jsi vyhrál...';
-    h1.style.color = '#000';
-    h2.innerHTML = 'Chceš to zkusit znovu?';
+    mainHeading.innerHTML = 'Tentokrát jsi vyhrál...';
+    mainHeading.style.color = '#000';
+    subheading.innerHTML = 'Chceš to zkusit znovu?';
   } else {
     document.body.style.backgroundImage = "url('./images/game-over.jpg')";
-    h1.innerHTML = 'Prohrál jsi! HA! HA! HA!';
-    h1.style.color = '#FFCBA8';
-    h2.innerHTML = '';
+    mainHeading.innerHTML = 'Prohrál jsi! HA! HA! HA!';
+    mainHeading.style.color = '#FFCBA8';
+    subheading.innerHTML = '';
     btn.style.display = 'none';
     btn2.style.display = 'block';
   }
