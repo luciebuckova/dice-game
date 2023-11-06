@@ -13,9 +13,10 @@ let originalContent = {
 
 btn.addEventListener('click', generatePips);
 btn2.addEventListener('click', () => {
-  document.body.style.backgroundImage = "url('./images/hallo-bg.jpg')";
+  document.body.style.backgroundImage = "url('./images/hallo-bg.webp')";
   mainHeading.innerHTML = originalContent.h1;
   mainHeading.style.color = '#000';
+  mainHeading.style.textShadow = '0px 5px 10px #70d887';
   subheading.innerHTML = originalContent.h2;
   btn.style.display = 'block';
   btn2.style.display = 'none';
@@ -42,15 +43,18 @@ function generatePips() {
   if (randomNumber1 === randomNumber2) {
     mainHeading.innerHTML = 'Plichta!';
     mainHeading.style.color = '#000';
+    mainHeading.style.textShadow = '0px 5px 10px #fe7702';
     subheading.innerHTML = '';
   } else if (randomNumber1 > randomNumber2) {
     mainHeading.innerHTML = 'Tentokrát jsi vyhrál...';
     mainHeading.style.color = '#000';
+    mainHeading.style.textShadow = '0px 5px 10px #70d887';
     subheading.innerHTML = 'Chceš to zkusit znovu?';
   } else {
-    document.body.style.backgroundImage = "url('./images/game-over.jpg')";
+    document.body.style.backgroundImage = "url('./images/game-over.webp')";
     mainHeading.innerHTML = 'Prohrál jsi! HA! HA! HA!';
     mainHeading.style.color = '#FFCBA8';
+    mainHeading.style.textShadow = '0px 5px 10px red';
     subheading.innerHTML = '';
     btn.style.display = 'none';
     btn2.style.display = 'block';
