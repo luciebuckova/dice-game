@@ -22,11 +22,11 @@ body {
   font-weight: 400;
   margin: 1.88rem 0;
   text-align: center;
-  text-shadow: 0px 5px 10px #70d887;
+  text-shadow: 0px 10px 5px #a2ff86;
 }
 
 .subheading {
-  color: #70d887;
+  color: #a2ff86;
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 0;
@@ -41,7 +41,7 @@ body {
 }
 
 .dice-heading span {
-  color: #e3e3e3;
+  color: #fff2d8;
   text-transform: uppercase;
   margin-bottom: 1.87rem;
 }
@@ -65,7 +65,7 @@ body {
   height: 7rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
-  background: #e3e3e3;
+  background-color: #fff2d8;
   box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.1), -1px -1px 10px 0px #fff;
   display: grid;
   grid-template-areas:
@@ -106,7 +106,7 @@ body {
 .btn {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background: #fe7702;
+  background-color: #fe7702;
   box-shadow: -1px -1px 10px 0px #fff, 7px 7px 10px 0px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   font-weight: 400;
@@ -121,6 +121,8 @@ body {
 
 .btn--hidden {
   display: none;
+  background-color: #c70039;
+  color: #fff2d8;
 }
 
 @media screen and (min-width: 768px) {
